@@ -1,0 +1,113 @@
+.tokenName {
+    color: #000000;
+    font-weight: bold;
+  }
+  
+  .companyName {
+    color: #c3c5cb;
+    font-weight: bold;
+    font-size: x-small;
+  }
+  
+  .price {
+    margin-left: 8px;
+    color: #c3c5cb;
+  }
+  
+  .links {
+    padding: 25px;
+    background-color: #f5f7f9;
+    font-size: x-small;
+    margin-left: -12px;
+    margin-bottom: -16px;
+    
+  }
+  
+  .token-info {
+    padding-right: 0;
+  }
+  
+  .showLinks {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: auto;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-right: 1.5em;
+  }
+  
+  .rotate-left {
+    transform: rotate(-180deg);
+    transform-origin: center;
+  }
+  
+  .rotate-right {
+    transform: rotate(0deg);
+    transform-origin: center;
+  }
+  
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .logo-container {
+    flex-shrink: 0;
+    width: 5%;
+  }
+  
+
+  .logo {
+    margin-right: 5px;
+  }
+
+  .copy-adress {
+    margin-left: 200px;
+    cursor: pointer;
+  }
+
+  .view-farms-button a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .links button a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+
+
+  
+  /* @keyframes slideDown {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  
+  .links {
+    padding: 25px;
+    background-color: #f5f7f9;
+    font-size: x-small;
+    margin-left: -12px;
+    margin-bottom: -16px;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease-in;
+    display: block;
+  } */
+  
+  /* .showLinks + .links {
+    transform: scaleY(1);
+    animation: slideDown 0.5s ease-out forwards;
+  }
+  
+
+   */

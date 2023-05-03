@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@300&family=Oxygen:wght@300;400&family=Roboto&display=swap");
+
+html,
+body,
+#root,
+.App {
+  height: 100%;
+}
+.icon {
+  color: #5b39fe;
+}
+* {
+  font-family: "Oxygen", sans-serif;
+}
+
+body,
+.page-header {
+  background-color: #dfdddd55;
+  font-family: "Oxygen", sans-serif;
+  color: #0f3256;
+}
+
+.farms,
+.farms-list,
+.account {
+  width: 600px;
+}
+
+.mitr {
+  font-family: "Mitr", sans-serif;
+}
+
+.grey-text {
+  color: #c3c5cb;
+}
+
+.blue-mix {
+  background: linear-gradient(to bottom right, #40aff8, #4d47f6);
+  color: #fff;
+}
+
+.nav-bar {
+  justify-content: center;
+}
+
+.page-header,
+.nav-bar,
+.farms-list > div {
+  background-color: #fff;
+}
+
+.nav-menu-btn {
+  display: none;
+}
+
+.account-heading {
+  color: #0f3256;
+  font-family: "Roboto", sans-serif;
+  line-height: 2rem;
+}
+
+#farm-modal-body {
+  max-width: 450px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.nav-menu-btn button {
+  padding: 0;
+}
+
+#dark * {
+  color: #fff;
+}
+
+#dark {
+  background-color: #1a1a1a;
+}
+
+#dark .page-header,
+#dark .nav-bar {
+  background-color: #202020;
+  color: #aaaaaa;
+}
+
+#dark .farms-list > div {
+  background-color: #232323;
+}
+
+@media (max-width: 600px) {
+  .farms {
+    width: 100%;
+    border-radius: 0 !important;
+    margin-top: 56px !important;
+  }
+
+  .farms-list {
+    padding: 8px;
+    max-width: 99%;
+  }
+
+  .nav-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 56px;
+  }
+
+  .nav-bar > div,
+  .nav-bar > div > button {
+    height: 100%;
+  }
+
+  .page-header {
+    position: fixed;
+    height: 56px;
+    width: 100%;
+  }
+
+  .header-menu-btn {
+    display: none;
+  }
+
+  .nav-menu-btn {
+    display: block;
+    font-size: 12px;
+  }
+}
