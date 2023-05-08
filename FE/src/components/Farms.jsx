@@ -5,9 +5,9 @@ import TotalLiquidity from "./TotalLiquidity";
 
 function Farms() {
   return (
-    <div style={{backgroundColor: "#dfdddd55"}} className="pt-1 pb-4">
-    <TotalLiquidity />
-    <Farm />
+    <div className="pt-1 pb-4">
+      <TotalLiquidity />
+      <Farm />
     </div>
   );
 }
