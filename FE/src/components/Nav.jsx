@@ -1,70 +1,30 @@
-import React from "react";
+import React from 'react'
 import "../styles/header.css";
-import { useNavigate } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCircle,
-  faSeedling,
-  faUser,
-  faBars,
-} from "@fortawesome/free-solid-svg-icons";
+import tokens from "../assets/svgs/tokens.svg"
+import farms from "../assets/svgs/farms.svg"
+import account from "../assets/svgs/account.svg"
+import { useNavigate } from 'react-router-dom';
 
 function Nav() {
-  const navigate = useNavigate();
+  const navigate = useNavigate()
   return (
-    <div className="d-flex nav-bar">
-      <div>
-        <button
-          className="header-btn py-1 px-5 dark-grey-hover"
-          onClick={() => navigate("/tokens")}
-        >
-          <div>
-            <FontAwesomeIcon icon={faCircle} />
-          </div>
-          <div className="fw-bold" style={{ fontSize: "12px" }}>
-            Tokens
-          </div>
-        </button>
-      </div>
-      <div>
-        <button
-          className="header-btn py-1 px-5 dark-grey-hover"
-          onClick={() => navigate("/farms")}
-        >
-          <div>
-            <FontAwesomeIcon icon={faSeedling} />
-          </div>
-          <div className="fw-bold" style={{ fontSize: "12px" }}>
-            Farms
-          </div>
-        </button>
-      </div>
-      <div>
-        <button
-          className="header-btn py-1 px-5 dark-grey-hover"
-          onClick={() => navigate("/account")}
-        >
-          <div>
-            <FontAwesomeIcon icon={faUser} />{" "}
-          </div>
-          <div className="fw-bold" style={{ fontSize: "12px" }}>
-            Account
-          </div>
-        </button>
-      </div>
-      <div className="nav-menu-btn">
-        <button className="header-btn px-5 dark-grey-hover">
-          <div>
-            <FontAwesomeIcon
-              icon={faBars}
-              style={{ width: "24px", height: "24px" }}
-            />
-          </div>
-          <div className="fw-bold">Menu</div>
-        </button>
-      </div>
+    <div className='d-flex justify-content-center' style={{borderTop: "1px solid #e7e8ea", paddingBottom: "5px", paddingTop:"5px", paddingTop: "4px", backgroundColor:"white"}}>
+      <button className='header-btn px-5 dark-grey-hover' onClick={()=>navigate("/tokens")}>
+        <div><img src={tokens} alt="tokens" style={{width: "24px"}}/></div>
+        <div className='fw-bold' style={{fontSize: "12px"}}>Tokens</div>
+      </button>
+
+      <button className='header-btn px-5 dark-grey-hover' onClick={()=>navigate("/farms")}>
+        <div><img src={farms} alt="farms" style={{width: "24px"}}/></div>
+        <div className='fw-bold' style={{fontSize: "12px"}}>Farms</div>
+      </button>
+
+      <button className='header-btn px-5 dark-grey-hover' onClick={()=>navigate("/account")}>
+        <div><img src={account} alt="account" style={{width: "24px"}}/></div>
+        <div className='fw-bold' style={{fontSize: "12px"}}>Account</div>
+      </button>
     </div>
-  );
+  )
 }
 
-export default Nav;
+export default Nav

@@ -43,23 +43,18 @@ const Tokens = () => {
   return (
     <div className="token-page bg-light pt-2">
       <Container className="rounded-4 bg-white p-0 card">
-        <Container className="p-0">
-          <Container className="p-0">
+        <Container className="p-0 custom-container" >
+          <Container className="p-0 m-0">
             <Container className="mt-1">
               <h5 className="titleFarmable">Farmable tokens</h5>
             </Container>
 
-            <Container className="search-container">
-              <InputGroup>
-                <FormControl className="rounded-4 bg-white search-bar" placeholder="Search tokens" aria-label="Search tokens" value={search} onChange={handleSearchChange} />
-                {/* NAV BAR TO FIX */}
-
-                <InputGroup.Text>
-                  <AiOutlineSearch />
-                </InputGroup.Text>
-              </InputGroup>
-            </Container>
-
+            <div className="search-bar-container">
+              <div className="search-icon-container">
+                <AiOutlineSearch />
+              </div>
+              <input className="rounded-4 bg-white search-bar" placeholder="Search tokens" aria-label="Search tokens" value={search} onChange={handleSearchChange} />
+            </div>
 
             {tokensToShow.map((token) => (
               <Container className="p-0 item" key={token.tokenName}>
@@ -67,7 +62,6 @@ const Tokens = () => {
                 <hr className="bar" />
               </Container>
             ))}
-
           </Container>
         </Container>
 
@@ -80,11 +74,6 @@ const Tokens = () => {
             <HiOutlineChevronRight style={{ fontSize: "2rem", transform: "scale(0.55)" }} />
           </button>
         </Container>
-
-      </Container>
-
-      <Container className="mt-5">
-        <Row>{/* NOTHING */}</Row>
       </Container>
     </div>
   );

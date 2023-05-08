@@ -1,43 +1,25 @@
-import React, { useState } from "react";
-import NewFarmModal from "./NewFarmModal";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDroplet, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import React from 'react'
+import filter from "../assets/svgs/filter.svg";
+import menu from "../assets/svgs/expand_more.svg";
 
 function TotalLiquidity() {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
   return (
-    <div
-      className="farms mx-auto mt-2 blue-mix p-4 pb-1 rounded-4"
-      style={{ height: "165px" }}
-    >
+    <div className="farms mx-auto mt-2 blue-mix py-3 px-4 rounded">
       <div className="d-flex flex-column align-items-center">
-        <div className="text-light mitr display-6">$2.98M</div>
+        <div className="text-light mitr fs-2">$2.98M</div>
         <div className="text-light mitr">Total farming liquidity</div>
       </div>
-      <div className="d-flex justify-content-end mt-4 mb-3">
-        <button
-          className="btn btn-outline-light rounded-pill py-0 px-3 me-2"
-          onClick={handleShow}
-          style={{ fontSize: "14px" }}
-        >
+      <div className="d-flex justify-content-end">
+        <button className="btn btn-outline-light rounded-pill">
           Create farm
         </button>
         <button className="btn btn-outline-light rounded-pill">
-          <FontAwesomeIcon icon={faDroplet} />
-          <FontAwesomeIcon icon={faAngleDown} />
+          <img src={filter}  style={{width: "24px"}}/>
+          <img src={menu} style={{width: "16px"}}/>
         </button>
       </div>
-      <NewFarmModal
-        show={show}
-        setShow={setShow}
-        handleClose={handleClose}
-        handleShow={handleShow}
-      />
     </div>
-  );
+  )
 }
 
-export default TotalLiquidity;
+export default TotalLiquidity
